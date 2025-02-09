@@ -1,19 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nature's Platter</title>
     <link rel="shortcut icon" href="./assets/healthy.png" type="image/x-icon">
+    <!-- DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/1be843896e.js" crossorigin="anonymous"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sora: ['Sora', 'serif'],
+                    },
+                    colors: {
+                        accent: '#179800',
+                        secondary: '#EFEBE3',
+                    },
+                },
+            },
+        }
+    </script>
 </head>
 
-<body>
-    <header>
+<body class="font-sora">
+    <header class="header">
+        <div class="navbar bg-base-100">
+            <!-- Navbar Start -->
+            <div class="navbar-start">
+                <a class=""><img src="./assets/logo-header.png" alt="logo"></a>
+            </div>
 
+            <!-- Navbar Center (Hidden on small screens) -->
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 text-xl">
+                    <li><a>Product</a></li>
+                    <li><a>Services</a></li>
+                    <li><a>Contact us</a></li>
+                </ul>
+            </div>
+
+            <!-- Navbar End -->
+            <div class="navbar-end">
+                <!-- Icons (Hidden on small screens) -->
+                <div class="hidden md:flex gap-4">
+                    <i class="fa-solid fa-magnifying-glass text-xl mr-[10px]"></i>
+                    <i class="fa-solid fa-cart-shopping text-xl mr-[10px]"></i>
+                </div>
+
+                <!-- Buttons (Hidden on small screens) -->
+                <div class="hidden sm:flex gap-2 ">
+                    <button class="btn btn-outline text-xl py-30 px-10">Login</button>
+                    <button class="btn bg-accent text-white text-xl py-30 px-10">Register</button>
+                </div>
+
+                <!-- Dropdown (Visible on small screens) -->
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li><a>Product</a></li>
+                        <li><a>Services</a></li>
+                        <li><a>Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </header>
     <main>
+        <section class="banner bg-gradient-to-t from-[#EFEBE3] to-[#FFFFFF]">
+            <div class="flex flex-col jusify-center items-center">
+                <div class="text-center px-[6px]">
+                    <h2 class="font-semibold text-[32px] mt-[48px] lg:mt-[90px] lg:text-[56px]">
+                        Freshness <span class="text-accent">You Can <br> Count</span>
+                        On, Prices You’ll Love!
+                    </h2>
+                    <p class="my-[32px] text-[16px] lg:text-[20px]">Shop your daily essentials at unbeatable prices.
+                        From fresh produce to pantry
+                        staples, we’ve got
+                        you covered every day!</p>
+                </div>
+                <div><img src="./assets/hero-vegetables.png" alt=""></div>
+            </div>
+        </section>
+        <section class="container mx-auto lg:mt-[140px]">
+            <h2
+                class="text-semibold lg:text-[36px] text-[24px] text-accent lg:mx-[10px] mx-[16px] my-[32px] lg:my-[48px]">
+                Services</h2>
+            <div class="grid lg:grid-cols-3 sm:grid-cols-1 gap-5 m-3">
+                <div class="card lg:h-[367px] bg-secondary text-center shadow-xl">
+                    <figure class="pt-[32px]">
+                        <img src="./assets/service.png" alt="service" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="font-semibold text-[24px]">24/7 Services</h2>
+                        <p>We’re always here for you! Enjoy round-the-clock support and services to meet your needs
+                            anytime, anywhere.</p>
+                    </div>
+                </div>
+                <div class="card lg:h-[367px] bg-secondary text-center shadow-xl">
+                    <figure class="pt-[32px]">
+                        <img src="./assets/delivery.png" alt="delivery" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="font-semibold text-[24px]">Fast Delivery</h2>
+                        <p>Get your orders delivered to your doorstep in record time. We prioritize speed without
+                            compromising quality.</p>
+                    </div>
+                </div>
+                <div class="card lg:h-[367px] bg-secondary text-center shadow-xl">
+                    <figure class="pt-[32px]">
+                        <img src="./assets/healthy.png" alt="healthy" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="font-semibold text-[24px]">Healthy Products</h2>
+                        <p>Choose from a wide range of fresh, organic, and healthy products to support your well-being
+                            and lifestyle.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-secondary">
+            <div class="container mx-auto lg:mt-[140px]">
+                <h2
+                    class="text-semibold lg:text-[36px] text-[24px] text-accent lg:mx-[10px] mx-[16px] my-[32px] lg:my-[48px]">
+                    Popular Products</h2>
+                <div>
+                    <div class="relative w-full p-6 bg-gradient-to-br from-[#53DB3A] to-[#A3F7B5] rounded-xl shadow-xl">
+                        <!-- Offer Content -->
+                        <div class="relative z-10">
+                            <h2 class="font-bold text-white text-3xl">30% off</h2>
+                            <p class="text-white text-lg mt-2">
+                                Discover a world of treats, toys, and essentials handpicked for you!
+                            </p>
+                            <button
+                                class="mt-4 px-6 py-2 bg-white text-black font-medium rounded-lg shadow-md hover:bg-gray-200">
+                                Buy Now
+                            </button>
+                        </div>
 
+                        <!-- Positioned Image -->
+                        <div class="absolute bottom-0 right-0 w-40 h-40">
+                            <img src="./assets/vegetable-offer.png" alt="Offer Image"
+                                class="w-full h-full object-contain">
+                        </div>
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </section>
     </main>
     <footer>
 
