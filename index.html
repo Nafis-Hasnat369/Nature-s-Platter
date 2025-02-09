@@ -32,6 +32,43 @@
             },
         }
     </script>
+    <style>
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            50% {
+                transform: scale(1.05);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes floatImage {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .animated-heading {
+            animation: bounceIn 1.5s ease-out infinite alternate;
+        }
+
+        .animated-image {
+            animation: floatImage 3s ease-in-out infinite;
+        }
+    </style>
 </head>
 
 <body class="font-sora">
@@ -86,18 +123,19 @@
     </header>
     <main>
         <section class="banner bg-gradient-to-t from-[#EFEBE3] to-[#FFFFFF]">
-            <div class="flex flex-col jusify-center items-center">
+            <div class="flex flex-col justify-center items-center">
                 <div class="text-center px-[6px]">
-                    <h2 class="font-semibold text-[32px] mt-[48px] lg:mt-[90px] lg:text-[56px]">
+                    <h2 class="font-semibold text-[32px] mt-[48px] lg:mt-[90px] lg:text-[56px] animated-heading">
                         Freshness <span class="text-accent">You Can <br> Count</span>
                         On, Prices You’ll Love!
                     </h2>
                     <p class="my-[32px] text-[16px] lg:text-[20px]">Shop your daily essentials at unbeatable prices.
                         From fresh produce to pantry
                         staples, we’ve got
-                        you covered every day!</p>
+                        you covered every day!
+                    </p>
                 </div>
-                <div><img src="./assets/hero-vegetables.png" alt=""></div>
+                <div><img src="./assets/hero-vegetables.png" alt="" class="animated-image"></div>
             </div>
         </section>
         <section class="container mx-auto lg:mt-[140px]">
@@ -309,7 +347,7 @@
             </div>
         </section>
         <section
-            class="bg-secondary rounded-2xl p-6 lg:p-10 m-[16px] flex flex-col md:flex-row items-center text-center lg:text-left max-w-7xl mx-auto -mb-40 relative">
+            class="bg-secondary rounded-2xl p-6 lg:p-10 flex flex-col lg:flex-row items-center text-center lg:text-left max-w-7xl lg:mx-auto mx-[16px] my-[48px] -mb-40 relative">
             <div class="w-full flex justify-center mb-6 lg:mb-0">
                 <img src="./assets/vegetable-busket.png" alt="veges" class="w-40 sm:w-48 lg:w-60 lg:w-72 xl:w-80">
             </div>
