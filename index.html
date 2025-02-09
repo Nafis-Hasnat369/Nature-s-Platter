@@ -32,6 +32,7 @@
             },
         }
     </script>
+    <!-- Custom CSS Animations -->
     <style>
         @keyframes bounceIn {
             0% {
@@ -72,14 +73,13 @@
 </head>
 
 <body class="font-sora">
+    <!-- Header Section -->
     <header class="header">
         <div class="navbar bg-base-100">
-            <!-- Navbar Start -->
+            <!-- Navbar -->
             <div class="navbar-start">
                 <a class=""><img src="./assets/logo-header.png" alt="logo"></a>
             </div>
-
-            <!-- Navbar Center (Hidden on small screens) -->
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1 text-xl">
                     <li><a>Product</a></li>
@@ -87,8 +87,6 @@
                     <li><a>Contact us</a></li>
                 </ul>
             </div>
-
-            <!-- Navbar End -->
             <div class="navbar-end">
                 <!-- Icons (Hidden on small screens) -->
                 <div class="hidden md:flex gap-4">
@@ -121,7 +119,10 @@
             </div>
         </div>
     </header>
+
+    <!-- Main Content -->
     <main>
+        <!-- Banner Section -->
         <section class="banner bg-gradient-to-t from-[#EFEBE3] to-[#FFFFFF]">
             <div class="flex flex-col justify-center items-center">
                 <div class="text-center px-[6px]">
@@ -138,6 +139,7 @@
                 <div><img src="./assets/hero-vegetables.png" alt="" class="animated-image"></div>
             </div>
         </section>
+        <!-- Services Section -->
         <section class="container mx-auto lg:mt-[140px]">
             <h2
                 class="font-semibold lg:text-[36px] text-[24px] text-accent lg:mx-[10px] mx-[16px] my-[32px] lg:my-[48px]">
@@ -175,6 +177,7 @@
                 </div>
             </div>
         </section>
+        <!-- Popular Products Section -->
         <section class="bg-secondary py-20 mt-20">
             <div class="container mx-auto px-4">
                 <h2 class="font-semibold text-accent text-xl md:text-2xl lg:text-3xl mb-6">Popular Products</h2>
@@ -195,7 +198,6 @@
                             <img src="./assets/vegetable-offer.png" alt="Offer Image" class="w-full object-contain">
                         </div>
                     </div>
-
                     <!-- Products Grid -->
                     <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 gap-4 lg:col-span-2 ">
                         <div
@@ -316,6 +318,7 @@
                 </div>
             </div>
         </section>
+        <!-- Arrival & Offers Section -->
         <section class="container mx-auto px-4 mb-[48px] lg:mb-[162px]">
             <h2 class="font-semibold text-lg md:text-2xl lg:text-3xl text-green-600 mx-4 my-6 md:my-8">
                 Arrival & Offers
@@ -346,89 +349,64 @@
                 </div>
             </div>
         </section>
-
-        <!-- FAQ section -->
         <!-- FAQ Section -->
         <section class="container mx-auto">
             <!-- FAQ Heading -->
             <h4 class="text-4xl text-accent font-semibold">FAQ</h4>
-
-            <!-- FAQ Item 1 -->
             <div class="collapse collapse-arrow bg-base-200">
-                <!-- Collapse Input (Radio Button) -->
                 <input type="radio" name="my-accordion-2" checked="checked" />
-                <!-- Collapse Title (Question) -->
                 <div class="collapse-title text-xl font-medium">
                     What payment methods do you accept?
                 </div>
-                <!-- Collapse Content (Answer) -->
                 <div class="collapse-content">
                     <p>We accept a variety of payment methods including credit/debit cards, PayPal, and bank transfers.
                         For more details, please visit our Payment Methods page.</p>
                 </div>
             </div>
-
-            <!-- FAQ Item 2 -->
             <div class="collapse collapse-arrow bg-base-200">
-                <!-- Collapse Input (Radio Button) -->
                 <input type="radio" name="my-accordion-2" />
-                <!-- Collapse Title (Question) -->
                 <div class="collapse-title text-xl font-medium">
                     How can I track my order?
                 </div>
-                <!-- Collapse Content (Answer) -->
                 <div class="collapse-content">
                     <p>Once your order has been shipped, you will receive a tracking number via email. You can use this
                         number to track your order on our website or the courier's website.</p>
                 </div>
             </div>
 
-            <!-- FAQ Item 3 -->
             <div class="collapse collapse-arrow bg-base-200">
-                <!-- Collapse Input (Radio Button) -->
                 <input type="radio" name="my-accordion-2" />
-                <!-- Collapse Title (Question) -->
                 <div class="collapse-title text-xl font-medium">
                     What is your return policy?
                 </div>
-                <!-- Collapse Content (Answer) -->
                 <div class="collapse-content">
                     <p>We offer a 30-day return policy for most products. If you are not satisfied with your purchase,
                         you can return it within 30 days for a full refund or exchange. Please ensure the product is in
                         its original condition.</p>
                 </div>
             </div>
-
-            <!-- FAQ Item 4 -->
             <div class="collapse collapse-arrow bg-base-200">
-                <!-- Collapse Input (Radio Button) -->
                 <input type="radio" name="my-accordion-2" />
-                <!-- Collapse Title (Question) -->
                 <div class="collapse-title text-xl font-medium">
                     Do you offer international shipping?
                 </div>
-                <!-- Collapse Content (Answer) -->
                 <div class="collapse-content">
                     <p>Yes, we offer international shipping to most countries. Shipping costs and delivery times vary
                         depending on the destination. Please check our Shipping Information page for more details.</p>
                 </div>
             </div>
-
-            <!-- FAQ Item 5 -->
             <div class="collapse collapse-arrow bg-base-200">
-                <!-- Collapse Input (Radio Button) -->
                 <input type="radio" name="my-accordion-2" />
-                <!-- Collapse Title (Question) -->
                 <div class="collapse-title text-xl font-medium">
                     How can I contact customer support?
                 </div>
-                <!-- Collapse Content (Answer) -->
                 <div class="collapse-content">
                     <p>You can contact our customer support team via email at support@naturesplatter.com or by calling
                         our toll-free number at 1-800-123-4567. Our support team is available 24/7 to assist you.</p>
                 </div>
             </div>
         </section>
+        <!-- Newsletter Section -->
         <section
             class="bg-secondary rounded-2xl p-6 lg:p-10 flex flex-col lg:flex-row items-center text-center lg:text-left max-w-7xl lg:mx-auto mx-[16px] my-[48px] -mb-40 relative">
             <div class="w-full flex justify-center mb-6 lg:mb-0">
@@ -452,6 +430,7 @@
             </div>
         </section>
     </main>
+    <!-- Footer Section -->
     <footer class="bg-accent text-white py-10 px-6 pt-[300px]">
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 text-left">
             <div class="space-y-4">
